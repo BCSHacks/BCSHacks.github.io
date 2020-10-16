@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -79,7 +80,7 @@
     <div class="unit-5 overlay" style="background-image: url('images/hero_bg_2.jpg');">
       <div class="container text-center">
         <h2 class="mb-0">Login</h2>
-<!--         <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep">></span> <span>Login</span></p> -->
+        <!-- <p class="mb-0 unit-6"><a href="index.html">Home</a> <span class="sep">></span> <span>Login</span></p> -->
       </div>
     </div>
 
@@ -94,26 +95,29 @@
           
             
           
-            <form action="index.html" class="p-5 bg-white">
+            <form action="index.html" class="p-5 bg-white", id = "login-form">
               
+              <div id="login-error-msg-holder">
+                <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+              </div>
 
               <div class="row form-group mb-5">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="fullname">E-mail</label>
-                  <input type="text" id="fullname" class="form-control" >
+                  <input type="text" name = "username" id="email-field" class="form-control" placeholder = "Email Address" >
                 </div>
               </div>          
               
               <div class="row form-group mb-5">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="fullname">Password </label>
-                  <input type="password" id="fullname" class="form-control" >
+                  <input type="password" name = "password" id="password-field" class="form-control" placeholder=  "Password">
                 </div>
               </div>
              
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" value="Login" class="btn btn-primary  py-2 px-5">
+                  <input type="submit" value="Login" id = "login-form-submit" class="btn btn-primary  py-2 px-5">
                 </div>
               </div>
 
@@ -179,6 +183,7 @@
     </footer>
   </div>
 
+  <script src="js/login-page.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
